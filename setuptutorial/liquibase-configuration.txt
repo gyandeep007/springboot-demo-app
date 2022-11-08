@@ -1,0 +1,13 @@
+steps required to configure liquibase
+1. add the liquibase dependency
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+        </dependency>
+2. create directory db/changelog under src/main/resources
+3. create a file db.changelog-master.yaml under the folder db/changelog with below content
+databaseChangeLog:
+  - includeAll:
+      path: db/changelog/changes
+4. create changes folder under db/changelog
+5. now you can add your sql files to changes folder which will automatically picked by spring while build
