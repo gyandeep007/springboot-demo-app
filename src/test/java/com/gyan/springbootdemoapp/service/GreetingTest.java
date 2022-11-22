@@ -25,6 +25,15 @@ class GreetingTest {
     }
 
     @Test
+    void testAdd() {
+        int a=10;
+        int b=20;
+        int c =a+b;
+        System.out.println(c);
+        Assertions.assertEquals(30,c);
+    }
+
+    @Test
     void testHelloWorld() { Greeting greeting = new Greeting();
         System.out.println(greeting.helloWorld("gyandeep"));
     }
