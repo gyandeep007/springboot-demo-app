@@ -16,7 +16,7 @@ pipeline{
                 echo 'Hi this is deploy step'
               }
           }
-          stage('deploy'){
+          stage('prod'){
               steps{
                 echo 'Hi this is deploy step again'
               }
