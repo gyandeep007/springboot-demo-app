@@ -4,6 +4,8 @@ package com.gyan.springbootdemoapp.controller;
 import com.gyan.springbootdemoapp.entities.Product;
 import com.gyan.springbootdemoapp.ruleengine.Validator;
 import com.gyan.springbootdemoapp.service.ProductService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
+
+    Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     @Autowired
     ProductService productService;
